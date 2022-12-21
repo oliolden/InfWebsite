@@ -1,5 +1,6 @@
 :root {
     --background-color: #121212;
+    --secondary-background-color: #222222;
     --primary-color: #EC6701;
     --secondary-color: #FFEA2C;
 }
@@ -8,51 +9,113 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: var(--background-color);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.4;
+    filter: blur(5px);
+    object-fit: cover;
 }
 
 .nav-bar {
-    
+    height: 100px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
 }
 
-.content{
+.nav-bar img {
+    width: 100%;
+    max-width: 35rem;
+    height: auto;
+}
+
+.content {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
-.card{
+.card {
+    position: relative;
     width: 15rem;
-    height: calc(min-content - 10rem);
     background-image: linear-gradient(to right, var(--primary-color) 55%, 75%, var(--secondary-color));
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     transition: transform 150ms ease;
     border-radius: 7px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: visible;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
-.card img{
-    width: 100%;
+.card img {
+    position: relative;
+    width: 95%;
     height: auto;
+    margin-bottom: -3.3rem;
+    transform: translateY(-3.3rem);
 }
 
-.card .title{
+.card .title {
+    position: relative;
+    box-sizing: border-box;
     font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
+    width: 100%;
     font-weight: bold;
     margin: 0;
-    padding: 15px 0;
     background-color: rgba(255, 255, 255, 0.1);
-    user-select: none;
-    padding: 10px;
-    cursor: pointer;
+    padding: 12px;
+    bottom: 0;
 }
 
 .card:hover {
     transform: scale(1.025);
+}
+
+.card:active {
+    transform: none;
+}
+
+@media screen and (max-width: 850px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        min-height: 66px;
+        max-width: 500px;
+    }
+
+    .card .title {
+        background: none;
+        width: auto;
+    }
+
+    .card img {
+        width: 6rem;
+        margin-inline: 1rem;
+        margin-bottom: -2rem;
+        transform: translateY(-2rem);    
+    }
 }

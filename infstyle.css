@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.inf-content{
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 40px;
+}
+
+.inf-content img{
+    width: 50rem;
+    height: auto;
+}
+
+.inf-content p{
+    font-size: 1.4rem;
+}
+
+.programTable{
+    width: 80%;
+    background-color: var(--secondary-background-color);
+    align-self: center;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+}
+
+.programTable, td, th {
+    border: var(--primary-color) 1px solid;
+}
+
+
+.programTable tr:nth-child(1){
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.programTable th{
+    height: 60px;
+}
+
+.programTable th:nth-child(1){
+    width: 500px;
+}

@@ -9,22 +9,24 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <video class="background" src="videos/tunnel.mp4" autoplay loop muted preload></video>
+        <script>document.querySelector(".background").playbackRate = 1.5</script>
         <nav class="nav-bar">
-            <span class="logo"></span>
+            <a href="index.html"><img src="images/tycho.svg" alt="Tycho Braheskolan"></a>
         </nav>
         <main class="content">
-            <div class="card">
+            <a class="card" href="inf.html">
                 <img src="images/inf.svg" alt="Informations- och medieteknik">
                 <p class="title">Informations- och medieteknik</p>
-            </div>
-            <div class="card">
+            </a>
+            <a class="card">
                 <img src="images/sam.svg" alt="Samhällsbyggande och miljö">
                 <p class="title">Samhällsbyggande och miljö</p>
-            </div>
-            <div class="card">
+            </a>
+            <a class="card">
                 <img src="images/des.svg" alt="Design och produktutveckling">
                 <p class="title">Design och produktutveckling</p>
-            </div>
+            </a>
         </main>
     </body>
 </html>
